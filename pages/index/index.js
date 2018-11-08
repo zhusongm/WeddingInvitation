@@ -4,18 +4,24 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '王笑月是坏蛋',
+    motto: '打开地图',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   bindViewTap: function() {
-    // wx.navigateTo({
-    //   url: '../logs/logs'
-    // })
+     wx.navigateTo({
+       url: '../maps/maps'
+     })
     this.setData({motto: 'lalalalala'})
   },
+  bindOpenMap: function() {
+    wx.navigateTo({
+      url: '../maps/maps',
+    })
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
